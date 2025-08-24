@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+       
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+
+        :root {
+            --body-color: #E4E9F7;
+          
+            --text-color: #000;
+            --box-bg-color: #FFF;
+            --box-border-color: #FF407D;
+            --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            min-height: 100%;
+            
+            background-image: url("https://wallpapercave.com/wp/wp7638068.jpg");
+            font-family: 'Open Sans', sans-serif;
+            background-size: 385px, 578px;
+        background-attachment:fixed;
+
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            opacity: 1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: calc(100% - 40px);
+            max-width: 600px;
+            padding: 10px;
+            border: 1px solid var(--box-border-color);
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--nav-color);
+            outline: none;
+        }
+
+        .search-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            border: 1px solid var(--box-border-color);
+            border-radius: 5px;
+            margin-left: -40px;
+            background-color: var(--box-bg-color);
+        }
+
+        .search-icon:before {
+            content: '\1F50D';
+            font-size: 20px;
+            color: var(--nav-color);
+        }
+
+        .search-text {
+            text-align: left;
+            color: var(--nav-color);
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .view-boxes {
+            display: none;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .view-box {
+            background-color: var(--box-bg-color);
+            border: 1px solid var(--box-border-color);
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .view-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .view-box h2 {
+            color: #FF407D;
+            margin-bottom: 10px;
+            font-size: 18px;
+           
+        }
+
+        .view-box p {
+            font-size: 14px;
+            color: var(--text-color);
+        }
+
+        .view-box::before {
+            color: #FF407D;
+            content: '➜';
+            font-size: 24px;
+            position: absolute;
+            top: 20px;
+            left: -40px;
+            
+            cursor: pointer;
+        }
+        .para2 {
+           
+            border-radius: 10px;
+            background-color: white;
+padding: 50px;
+
+
+
+        }
+.para2 li{
+    list-style: none;
+}
+       footer {
+        text-align: center;
+       } 
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .view-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .view-box {
+                max-width: 100%;
+            }
+
+            .view-box::before {
+                left: 10px;
+                top: -10px;
+                font-size: 20px;
+            }
+        }
+
+        .faq-container {
+            margin-top: 40px;
+            display: none;
+            border: 1px solid #FF407D;
+            border-radius: 10px;
+            background-color: rgba(255,255,255,0.9);
+padding: 50px;
+        }
+
+        .faq-container h3 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .faq-container p {
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .faq-container p strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #FF407D;
+        }
+        nav{margin-bottom: 0%;
+    margin-top: 0px;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+#logo {
+    position: relative;
+    left: -5%;
+   padding: 0;
+   margin: 0;
+}
+#name {
+    position: relative;
+    right:8%;
+    font-size: 30px;
+top: -20px;
+}
+
+.nav{background-color:rgba(255, 192, 203);
+     padding-bottom:1%;
+     padding-top:0%;
+     width:100%;
+    padding-left: 5%;}
+
+nav ul li {
+    position: relative;
+    top:0px;
+  display: inline;
+  padding: 0.3em;
+  color: white;
+  border: none;
+  margin: 20px;
+font-family: 'Chewy', cursive;
+}
+
+a{color:black;
+ text-decoration:none;}
+
+nav ul li a:hover {font-size:100%;
+  cursor:url(http://www.zingerbug.com/cursors/cursors/paws1.gif), auto;
+color:white;}
+    </style>
+</head>
+
+<body>
+   <nav>
+      <ul class="nav">
+        <li id="logo"><a href="pethomepage.html">  <svg width="94px" height="80px" viewBox="0 0 48.00 48.00" id="a" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="2.592"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.b{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="b" d="M26.1227,43.5c.5641-15.2541-5.5775-20.398-10.4257-23.5907,1.1825-5.7942,5.4274-8.9252,5.4274-8.9252"></path><path class="b" d="M25.0978,10.3312s-1.9733,3.1927-3.747,3.2592c0,0-.5765-5.8312-.3547-7.0063,1.4412-1.685,4.5452-2.0841,6.3189-2.0841s3.1927,1.1973,3.4366,3.8135c1.685,.0222,3.2814,.7982,3.614,1.5298-.1109,1.8624-1.6185,2.8158-3.0819,3.3701s-2.6606,1.4633-2.6606,2.3502,.3991,4.2348,2.8823,4.7004,6.4076,1.685,6.4076,5.6981-1.3525,3.3479-1.3525,7.2797,.4139,3.0449,.4139,5.0551-.6504,3.784-1.3007,4.9665"></path><path class="b" d="M32.3332,42.9088s.7391-3.4292,.7391-5.0551-1.3816-3.7392-2.838-5.5725c-1.2564-1.5816-4.5337-.2037-4.4144,3.9035"></path><path class="b" d="M36.1235,22.1417c3.3046,.3395,5.6105-2.5576,3.6593-6.0459"></path><path class="b" d="M15.697,19.9093c.2069,.9164,.3769,2.7493,.3769,2.7493-1.1314,0-2.1587,.9578-2.8017,1.3791-1.312,.8596-2.6858,1.1485-2.6378,2.7005,.473,1.2416,2.5941,1.382,4.1313,1.3525l-.0333,.8647c-1.5314,1.4637-4.4233,4.7455-4.4233,8.78,0,4.7004,3.4366,5.5281,5.3877,5.5281s11.6804-4.9184,8.4888-13.5099"></path><path class="b" d="M7.7078,30.1379c.9164,.0887,1.9215,.2365,1.9215,1.685s-2.1285,2.8084-2.1285,6.2081,2.2837,5.2325,8.1961,5.2325"></path><path class="b" d="M36.8827,37.0506c-.5586-2.1828-3.101-4.5774-3.8105-4.9321s-.7506,3.236-.2349,4.4486"></path></g></svg>
+        </a></li>
+        <li id="name"><a>Fur-ever Friends Foundation</a></li>
+        <li><a href="pethomepage.html">home</a></li>
+        <li><a href="parent.html">PARENT </a></li>
+         <li><a href="adoption.html">ADOPTER</a></li>
+        <li ><a href="dog.html">DOGS</a></li>
+         <li><a href="cat.html">CATS</a></li>
+        <li><a href="consultform.html">CONSULTATION</a></li>
+        <li><a href="petsignin.html">SIGN</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        
+
+      </ul>
+    </nav>
+    <div class="container">
+        <h1>How can we help you?</h1>
+        <div class="search-bar">
+            <label for="searchInput"></label>
+            <input type="text" placeholder="Describe your issue..." id="searchInput">
+            <div class="search-icon" onclick="search()">
+                <!-- Search icon -->
+            </div>
+        </div>
+        <div class="search-text" id="searchText"></div>
+        <div class="view-boxes" id="viewBoxes">
+            <div class="view-box" onclick="insertText('Abo Ali: Revolutionizing E-commerce in the Digital Age')">
+                <h2>Popular Articles</h2>
+                <p>Explore the most common questions and articles.</p>
+            </div>
+            <div class="view-box" onclick="insertText('FAQ')">
+                <h2>FAQ</h2>
+                <p>Find answers to frequently asked questions.</p>
+            </div>
+            <div class="view-box" onclick="goToHomePage()">
+                <h2>Go to Home Page</h2>
+                <p>Search our extensive knowledge base.</p>
+            </div>
+        </div>
+
+        <div class="faq-container" id="faqContainer">
+            <h3>Frequently Asked Questions</h3>
+            <p><strong>Q1: What is the Fur-ever Friends Foundation?</strong> The Fur-ever Friends Foundation is a platform that connects individuals looking to adopt pets with shelters, rescues, and individuals who have pets available for adoption. Our goal is to facilitate successful pet placements by providing a streamlined connection between adopters and pet providers.</p>
+            <p><strong>Q2: How does the Fur-ever Friends Foundation work?</strong> Our platform allows pet providers (such as shelters and rescues) to list available pets and provide detailed information about them. Potential adopters can browse these listings, contact the providers directly through our platform, and arrange to meet and adopt a pet.</p>
+            <p><strong>Q3: How do I search for pets available for adoption?</strong> You can search for pets by using our website’s search functionality. Filter by criteria such as species, breed, age, size, and location to find pets that match your preferences. Each listing includes information about the pet, including photos and adoption details.</p>
+
+            <p><strong>Q4: How do I list a pet for adoption on your platform?</strong> Pet providers can list pets by creating an account on our platform. Once registered, they can submit information about the pet, including photos, a description, and any relevant medical or behavioral details. Our team reviews and approves each listing before it goes live.</p>
+            <p><strong>Q5: What should I include in my pet adoption application?</strong> When applying to adopt a pet, provide details about your living situation, experience with pets, and your plans for caring for the new pet. This helps pet providers understand your readiness and suitability for adoption.</p>
+            <p><strong>Q6: How can I contact a pet provider or shelter through the platform?</strong> Each pet listing includes contact information for the provider or shelter. You can reach out directly through the platform’s messaging system or use the provided contact details to arrange a meeting or ask questions about the pet.</p>
+
+
+            <p><strong>Q7: Are there any fees associated with using the Fur-ever Friends Foundation?</strong>adoption fees are determined by the individual pet providers or shelters and are required to cover veterinary care, vaccinations, and other expenses.</p>
+
+
+            <p><strong>Q8: What happens if I have questions or issues after adopting a pet?</strong>If you have questions or issues after adopting, contact the pet provider or shelter directly. If you need additional support, you can also reach out to our team for assistance or resources to help with post-adoption challenges.
+            </p>
+
+
+            <p><strong>Q9: How can I adopt a pet from the Fur-ever Friends Foundation?</strong> To adopt a pet, visit our center or check our website for available animals. You can fill out an adoption application online or in person. Our team will review your application, conduct a brief interview, and schedule a meet-and-greet with the pet you’re interested in.</p>
+            <p><strong>Q10:  What is the adoption process like?</strong>Our adoption process includes completing an application, meeting the pet, and a brief home visit if needed. We also require a small adoption fee to help cover the cost of veterinary care and other expenses. Once approved, you can bring your new pet home!</p>
+            <p><strong>Q11: What is included in the adoption fee?</strong> The adoption fee typically covers spaying/neutering, vaccinations, microchipping, and a basic health check. Additional medical treatments or preventive care may also be included.</p>
+          
+            <p><strong>Q12: What should I expect during the adoption process?</strong> Our goal is to ensure a good match between you and your new pet. Expect to answer questions about your living situation, experience with pets, and lifestyle. We may also provide information about the pet’s behavior, health, and care requirements.</p>
+            <p><strong>Q13:Do you have any tips for new pet owners? </strong> Absolutely! We provide resources and guidance on pet care, training, and adjusting to life with your new furry friend. Be patient, consistent, and loving as your pet adjusts to their new home.</p>
+            <p><strong>Q14:  What if I need to return a pet after adoption?</strong>We encourage adopters to reach out to us if they encounter difficulties. We will work with you to address any issues and, if necessary, assist with rehoming the pet. Our priority is the well-being of the animals.</p>
+            <p><strong>Q15: Can I adopt if I have other pets at home?</strong> Yes, many of our pets do well with other animals. We may ask about your current pets and their compatibility with the new pet. A meet-and-greet may be arranged to ensure a smooth introduction.</p>
+           
+            <p><strong>Q16: Are there any requirements for adopting a pet?</strong> Requirements may include being at least 18 years old, having a stable living situation, and being able to provide proper care and a safe environment for the pet. Specific requirements may vary based on the individual pet.</p>
+            <p><strong>Q17:  What if I want to adopt a pet but don’t have a lot of experience?</strong> Our staff will provide guidance and resources to help you feel confident in your new role as a pet owner. We are here to support you through every step of the adoption process and beyond.</p>
+
+<br><br><br>
+<div class="para2">
+    <header>
+        <h1>The Joys and Responsibilities of Pet Adoption: A Comprehensive Guide</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>Pet adoption is a profound and life-changing decision that brings immense joy to both the adopter and the animal. Adopting a pet not only saves a life but also enriches your own. This article explores the benefits of adopting a pet, the steps involved in the adoption process, and essential tips to ensure a successful and fulfilling experience for both you and your new furry friend.</p>
+        </section>
+
+        <section>
+            <h2>Why Adopt?</h2>
+            <ul>
+                <li><strong>Save a Life:</strong> One of the most compelling reasons to adopt is the opportunity to save a life. Millions of animals in shelters and rescues are waiting for their forever homes. Adoption gives these animals a second chance at a happy life.</li>
+                <li><strong>Gain a Loyal Companion:</strong> Pets are known for their unwavering loyalty and companionship. Adopting a pet can provide you with a devoted friend who will offer love and support, enhancing your quality of life.</li>
+                <li><strong>Combat Overpopulation:</strong> By adopting, you help reduce the number of animals in shelters and combat pet overpopulation. Spaying and neutering pets also contribute to preventing unwanted litters and reducing the strain on animal shelters.</li>
+                <li><strong>Discover a Unique Bond:</strong> Every adopted pet has a unique story and personality. The bond formed through adoption can be incredibly rewarding, as you witness their transformation and integrate them into your family.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>The Adoption Process</h2>
+            <ul>
+                <li><strong>Research and Preparation:</strong> Begin by researching local shelters and rescue organizations. Consider factors such as the size, breed, and energy level of the pet that best fits your lifestyle. Prepare your home with the necessary supplies and create a safe, comfortable environment.</li>
+                <li><strong>Visit Shelters and Rescues:</strong> Spend time visiting adoption centers to meet animals in person. Interact with different pets to find one that matches your preferences and lifestyle. Shelter staff can provide valuable information about the pets’ personalities and needs.</li>
+                <li><strong>Complete an Application:</strong> Once you find a pet you’re interested in, complete an adoption application. This may include providing information about your living situation, experience with pets, and your plans for pet care.</li>
+                <li><strong>Home Visit and Interview:</strong> Some adoption centers may require a home visit or interview to ensure your home is a suitable environment for the pet. This step helps assess whether the pet will be safe and comfortable in your home.</li>
+                <li><strong>Finalize Adoption:</strong> If approved, you will finalize the adoption by signing an agreement and paying the adoption fee. The fee typically covers veterinary care, vaccinations, spaying/neutering, and microchipping.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Tips for a Successful Adoption</h2>
+            <ul>
+                <li><strong>Be Patient:</strong> Finding the right pet can take time. Be patient and keep an open mind. The perfect companion may not always be the one you initially envisioned.</li>
+                <li><strong>Prepare for Adjustment:</strong> Both you and your new pet will need time to adjust. Be prepared for a period of acclimatization, and provide a calm and loving environment as your pet settles in.</li>
+                <li><strong>Provide Training and Socialization:</strong> Invest time in training and socializing your pet. This helps them adapt to their new home and strengthens the bond between you. Consider enrolling in obedience classes if needed.</li>
+                <li><strong>Regular Veterinary Care:</strong> Schedule regular veterinary check-ups to ensure your pet’s health and well-being. Keep up with vaccinations, dental care, and preventive treatments.</li>
+                <li><strong>Stay Informed:</strong> Stay informed about pet care and behavior. Resources such as books, online forums, and pet care professionals can provide valuable insights and support.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Pet adoption is a deeply rewarding experience that offers countless benefits. By adopting, you’re not only giving an animal a second chance but also gaining a loyal companion who will enrich your life in many ways. Follow the adoption process with care and preparation, and embrace the responsibilities that come with pet ownership. In return, you’ll enjoy the immeasurable joy of sharing your life with a loving, furry friend.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <br><br><br><br>
+        <p>&copy; 2024 Fur-ever Friends Foundation. All rights reserved.</p>
+    </footer>
+        
+                 </div>
+         </div>
+    </div>
+
+    <script>
+        function insertText(text) {
+    document.getElementById('searchInput').value = text;
+    document.getElementById('searchText').textContent = text;
+    search();
+
+    // Check if the text matches the specific article title
+    if (text === 'Abo Ali: Revolutionizing E-commerce in the Digital Age') {
+        // Scroll to the "para2" section
+        var para2Section = document.querySelector('.para2');
+        if (para2Section) {
+            para2Section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+}
+
+
+        function search() {
+            var searchBar = document.querySelector('.search-bar');
+            var viewBoxes = document.getElementById('viewBoxes');
+            var textBox = document.getElementById('searchInput');
+            var textBoxValue = textBox.value.trim();
+            if (textBoxValue !== '') {
+                // If search input has value, show the view boxes and FAQ
+                viewBoxes.style.display = 'flex';
+                document.getElementById('faqContainer').style.display = 'block';
+            } else {
+                // Otherwise, hide the view boxes, FAQ, and search bar
+                viewBoxes.style.display = 'none';
+                document.getElementById('faqContainer').style.display = 'none';
+                searchBar.style.display = 'none';
+            }
+        }
+
+        function goToHomePage() {
+            // Redirect to the homepage
+            window.location.href = "pethomepage.html";
+        }
+
+        // Add an event listener to the search icon to clear the search bar
+        document.querySelector('.search-icon').addEventListener('click', function() {
+            document.getElementById('searchInput').value = '';
+        });
+    </script>
+</body>
+
+</html>

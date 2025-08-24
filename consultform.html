@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>#text-area{
+        width: 80%;
+        height: 100px; 
+      }
+      input{
+        width: 100%;
+        margin-top: 15px;
+      }
+      body{
+        overflow-x: hidden;
+        background-color: pink;
+        font-family: monospace;
+        display: flex;
+        flex-direction: column;
+        background-image: url("https://wallpapercave.com/wp/wp7638068.jpg");
+          background-size: 385px, 578px;
+        background-attachment:fixed;
+      }
+      #div-title{
+        background-color: black;
+        color: pink;
+        text-align: center;
+        font-weight: bold;
+        width:80%;
+        margin-left: 10%;
+      }
+      #div-description{
+        text-align: center;
+        background-color: rgba(255, 192, 203, 0.9);
+        color: black;
+        font-weight: bold;
+        width:80%;
+        margin-left: 10%;
+      }
+      main {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        border: solid grey;
+        font-size:14px;
+        background: rgba(255, 192, 203, 0.9);
+        
+      }
+      form{
+        margin:5%;
+        
+      }
+      button {
+        background-color: white;
+      
+        margin-left: 38%;
+        width: 200px;
+        height: 50px;
+        border: none;
+        margin-bottom: 2%;
+      }
+button:hover {
+    background-color: black;
+    cursor: pointer;
+    border-radius: 45px;
+    color: white;
+}
+nav{
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 0%;
+    margin-top: 0px;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    top: -26px;
+     left: -21px;
+     
+}
+#logo {
+    position: relative;
+    left: -2.5%;
+   padding: 0;
+   margin: 0;
+}
+#name {
+    position: relative;
+    right:6%;
+    font-size: 30px;
+top: -20px;
+}
+
+.nav{background-color:rgba(255, 192, 203);
+  background-size: cover;
+     padding-bottom:1%;
+     padding-top:0%;
+     width:101%;
+     position: relative;
+    
+  
+    }
+
+nav ul li {
+    position: relative;
+    top:0px;
+  display: inline;
+  padding: 0.3em;
+  color: white;
+  border: none;
+  margin: 20px;
+font-family: 'Chewy', cursive;
+}
+
+a{color:black;
+ text-decoration:none;}
+
+nav ul li a:hover {font-size:100%;
+  cursor:url(http://www.zingerbug.com/cursors/cursors/paws1.gif), auto;
+color:white;}
+/*-- nav--*/
+
+
+      </style>
+</head>
+<body>
+
+  <nav>
+      <ul class="nav">
+        <li id="logo"><a href="pethomepage.html">  <svg width="94px" height="80px" viewBox="0 0 48.00 48.00" id="a" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="2.592"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.b{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="b" d="M26.1227,43.5c.5641-15.2541-5.5775-20.398-10.4257-23.5907,1.1825-5.7942,5.4274-8.9252,5.4274-8.9252"></path><path class="b" d="M25.0978,10.3312s-1.9733,3.1927-3.747,3.2592c0,0-.5765-5.8312-.3547-7.0063,1.4412-1.685,4.5452-2.0841,6.3189-2.0841s3.1927,1.1973,3.4366,3.8135c1.685,.0222,3.2814,.7982,3.614,1.5298-.1109,1.8624-1.6185,2.8158-3.0819,3.3701s-2.6606,1.4633-2.6606,2.3502,.3991,4.2348,2.8823,4.7004,6.4076,1.685,6.4076,5.6981-1.3525,3.3479-1.3525,7.2797,.4139,3.0449,.4139,5.0551-.6504,3.784-1.3007,4.9665"></path><path class="b" d="M32.3332,42.9088s.7391-3.4292,.7391-5.0551-1.3816-3.7392-2.838-5.5725c-1.2564-1.5816-4.5337-.2037-4.4144,3.9035"></path><path class="b" d="M36.1235,22.1417c3.3046,.3395,5.6105-2.5576,3.6593-6.0459"></path><path class="b" d="M15.697,19.9093c.2069,.9164,.3769,2.7493,.3769,2.7493-1.1314,0-2.1587,.9578-2.8017,1.3791-1.312,.8596-2.6858,1.1485-2.6378,2.7005,.473,1.2416,2.5941,1.382,4.1313,1.3525l-.0333,.8647c-1.5314,1.4637-4.4233,4.7455-4.4233,8.78,0,4.7004,3.4366,5.5281,5.3877,5.5281s11.6804-4.9184,8.4888-13.5099"></path><path class="b" d="M7.7078,30.1379c.9164,.0887,1.9215,.2365,1.9215,1.685s-2.1285,2.8084-2.1285,6.2081,2.2837,5.2325,8.1961,5.2325"></path><path class="b" d="M36.8827,37.0506c-.5586-2.1828-3.101-4.5774-3.8105-4.9321s-.7506,3.236-.2349,4.4486"></path></g></svg>
+        </a></li>
+        <li id="name"><a>Fur-ever Friends Foundation</a></li>
+        <li><a href="pethomepage.html">home</a></li>
+        <li><a href="parent.html">PARENT </a></li>
+         <li><a href="adoption.html">ADOPTER</a></li>
+        <li ><a href="dog.html">DOGS</a></li>
+         <li><a href="cat.html">CATS</a></li>
+        <li><a href="consultform.html">CONSULTATION</a></li>
+        <li><a href="petsignin.html">SIGN</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        
+
+      </ul>
+    </nav>
+
+
+
+    <div id="div-title"><h1 id="title"> consultation form</h1></div>
+    <div id="div-description"> <p id="description">  Fill in this mandaroty questionaire to place your consultation </p> </div>
+     </br>
+   <main>
+     <form action="/consult" method="POST">
+       <div>
+      <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name"  placeholder="Enter your full name"  required><br><br></div> 
+     <hr>
+       
+      
+   <div>
+    <label for="instagram"> active instagram account to contact with you: </label> </br>
+    <input type="text" id="instagram" name="instagram"  placeholder="Enter your active instagram account" required> </div>
+<hr>
+       <div>
+         <label for="Age"> Age: </label> </br>
+       <input type="number" id="Age" placeholder="0" name="Age" required>
+       </div>
+       <hr>
+       <div>
+        <label for="times"> how many times you completed this form: </label> </br>
+      <input type="number" id="times"name="times"  placeholder="Enter number of times you compeleted this form before" required>
+      </div>
+      <hr>
+ <div>
+   <label for="livingsituation"> Choose your living situation: </label> </br>
+       <input type="text" id="livingsituation" placeholder="livingsituation:" name="livingsituation" required> </div>
+ 
+     <hr>
+     <div>
+   <label for="lifestyle"> lifestyle: </label> </br>
+       <input type="text" id="lifestyle" placeholder="lifestyle:" name="lifestyle"required> </div> 
+     <hr>
+     <div>
+    <label for="kids"> kids: </label> </br>
+       <input type="text" id="kids" placeholder="kids:" name="kids" required>
+</div>
+<hr>
+     <div>
+      <label for="consultation_day"> consulatation_day: </label> </br>
+       <input type="text" id="consultation_day" placeholder=" enter suitable day for online consultation" name="consultation_day" required>
+ </div>
+       <hr>
+       
+ <div>
+      <label for="experience">your  experience with pets: </label> </br>
+       <input type="text" id="experience" placeholder="enter your previous experience with pets" name="experience" required>
+ </div>
+ </br>
+ <hr>
+ <div>
+      <label for="placeconsulatation">how to want to  place the consultation: </label> </br>
+       <input type="text" id="placeconsulatation" placeholder="enter suitable way for placing your online consultation" name="placeconsultation" required>
+ </div>
+ <hr>
+  <div>
+        <label for="Email">mail:</label>
+        <input type="text" id="Email" name="Email" placeholder="Enter your active email" required><br><br> </div>
+   <hr>
+    </br>
+
+ <div>
+    <button onclick="alarm()">submit</button>
+    <button onclick="consult()">consultation terms</button>
+   
+    </div>
+    </form>
+    <script>
+       function alarm() {
+        alert("we will contact you in 7 days for your interview,please answer");
+       }
+       function consult() {
+        window.location.href="adoptionterms.html";
+       }
+    
+
+    </script>
+ 
+
+ </main>
+</body>
+</html>

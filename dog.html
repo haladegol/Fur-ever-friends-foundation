@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fur-Ever Friends Foundation - Dogs for Adoption</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      background-image: url("https://wallpapercave.com/wp/wp7638068.jpg");
+      background-size: 385px, 578px;
+    }
+    header {
+      background-color: #ffcccb;
+     
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #333;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .sort-options {
+      margin-bottom: 20px;
+    }
+    .dog-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .dog-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px 0 0 10px;
+    }
+    .dog-info {
+      padding: 20px;
+    }
+    .dog-info h2 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #333;
+    }
+    .dog-info p {
+      margin: 10px 0;
+      color: #666;
+    }
+    .adopt-btn {
+      background-color: #ffcccb;
+      color: #333;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .adopt-btn:hover {
+      background-color: #ff9999;
+    }
+    nav{margin-bottom: 0%;
+    margin-top: -18px;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+#logo {
+    position: relative;
+    left: -5%;
+   padding: 0;
+   margin: 0;
+}
+#name {
+    position: relative;
+    right:8%;
+    font-size: 30px;
+top: -20px;
+}
+
+.nav{background-color:rgba(255, 192, 203, 0.9);
+     padding-bottom:1%;
+     padding-top:0%;
+     width:98.8%;
+    padding-left: 2%;}
+
+nav ul li {
+    position: relative;
+    top:0px;
+  display: inline;
+  padding: 0.3em;
+  color: white;
+  border: none;
+  margin: 20px;
+font-family: 'Chewy', cursive;
+}
+
+a{color:black;
+ text-decoration:none;}
+
+nav ul li a:hover {font-size:100%;
+  cursor:url(http://www.zingerbug.com/cursors/cursors/paws1.gif), auto;
+color:white;}
+/*-- nav--*/
+  </style>
+</head>
+<body>
+  <header>
+  <nav>
+      <ul class="nav">
+        <li id="logo"><a href="pethomepage.html">  <svg width="94px" height="80px" viewBox="0 0 48.00 48.00" id="a" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="2.592"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.b{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="b" d="M26.1227,43.5c.5641-15.2541-5.5775-20.398-10.4257-23.5907,1.1825-5.7942,5.4274-8.9252,5.4274-8.9252"></path><path class="b" d="M25.0978,10.3312s-1.9733,3.1927-3.747,3.2592c0,0-.5765-5.8312-.3547-7.0063,1.4412-1.685,4.5452-2.0841,6.3189-2.0841s3.1927,1.1973,3.4366,3.8135c1.685,.0222,3.2814,.7982,3.614,1.5298-.1109,1.8624-1.6185,2.8158-3.0819,3.3701s-2.6606,1.4633-2.6606,2.3502,.3991,4.2348,2.8823,4.7004,6.4076,1.685,6.4076,5.6981-1.3525,3.3479-1.3525,7.2797,.4139,3.0449,.4139,5.0551-.6504,3.784-1.3007,4.9665"></path><path class="b" d="M32.3332,42.9088s.7391-3.4292,.7391-5.0551-1.3816-3.7392-2.838-5.5725c-1.2564-1.5816-4.5337-.2037-4.4144,3.9035"></path><path class="b" d="M36.1235,22.1417c3.3046,.3395,5.6105-2.5576,3.6593-6.0459"></path><path class="b" d="M15.697,19.9093c.2069,.9164,.3769,2.7493,.3769,2.7493-1.1314,0-2.1587,.9578-2.8017,1.3791-1.312,.8596-2.6858,1.1485-2.6378,2.7005,.473,1.2416,2.5941,1.382,4.1313,1.3525l-.0333,.8647c-1.5314,1.4637-4.4233,4.7455-4.4233,8.78,0,4.7004,3.4366,5.5281,5.3877,5.5281s11.6804-4.9184,8.4888-13.5099"></path><path class="b" d="M7.7078,30.1379c.9164,.0887,1.9215,.2365,1.9215,1.685s-2.1285,2.8084-2.1285,6.2081,2.2837,5.2325,8.1961,5.2325"></path><path class="b" d="M36.8827,37.0506c-.5586-2.1828-3.101-4.5774-3.8105-4.9321s-.7506,3.236-.2349,4.4486"></path></g></svg>
+        </a></li>
+        <li id="name"><a>Fur-ever Friends Foundation</a></li>
+        <li><a href="pethomepage.html">home</a></li>
+        <li><a href="parent.html">PARENT </a></li>
+         <li><a href="adoption.html">ADOPTER</a></li>
+        <li ><a href="dog.html">DOGS</a></li>
+         <li><a href="cat.html">CATS</a></li>
+        <li><a href="consultform.html">CONSULTATION</a></li>
+        <li><a href="petsignin.html">SIGN</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        
+
+      </ul>
+    </nav>
+    <h1>Dogs Available for Adoption</h1>
+  </header>
+  <div class="container">
+    <div class="sort-options">
+      <label for="sort">Sort by:</label>
+      <select id="sort" onchange="sortDogs()">
+        <option value="name">Name</option>
+        <option value="age">Age</option>
+        <option value="breed">Breed</option>
+      </select>
+    </div>
+    <div id="dog-list">
+      <div class="dog-card" data-name="Buddy" data-age="2" data-breed="Labrador Retriever">
+        <img src="https://placedog.net/150/150" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Buddy</h2>
+          <p>Age: 2 years</p>
+          <p>Breed: Labrador Retriever</p>
+          <p>Buddy is a playful and affectionate dog looking for a loving home.</p>
+          <button class="adopt-btn">Adopt Me</button>
+        </div>
+      </div>
+      <div class="dog-card" data-name="Bella" data-age="3" data-breed="German Shepherd">
+        <img src="https://placedog.net/150/151" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Bella</h2>
+          <p>Age: 3 years</p>
+          <p>Breed: German Shepherd</p>
+          <p>Bella is a calm and gentle dog who loves to be pampered.</p>
+          <button class="adopt-btn">Adopt Me</button>
+        </div>
+      </div>
+      <!-- Repeat the dog-card div for 18 more dogs -->
+      <div class="dog-card" data-name="Max" data-age="1" data-breed="Golden Retriever">
+        <img src="https://placedog.net/150/152" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Max</h2>
+          <p>Age: 1 year</p>
+          <p>Breed: Golden Retriever</p>
+          <p>Max is a curious and energetic dog who loves to explore.</p>
+          <button class="adopt-btn">Adopt Me</button>
+        </div>
+      </div>
+      <div class="dog-card" data-name="Lucy" data-age="4" data-breed="Bulldog">
+        <img src="https://placedog.net/150/153" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Lucy</h2>
+          <p>Age: 4 years</p>
+          <p>Breed: Bulldog</p>
+          <p>Lucy is a gentle giant who enjoys lounging and being petted.</p>
+          <button class="adopt-btn">Adopt Me</button>
+        </div>
+      </div>
+      <div class="dog-card" data-name="Charlie" data-age="2" data-breed="Beagle">
+        <img src="https://placedog.net/150/154" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Charlie</h2>
+          <p>Age: 2 years</p>
+          <p>Breed: Beagle</p>
+          <p>Charlie is an adventurous and playful dog who loves to run.</p>
+          <button class="adopt-btn">Adopt Me</button>
+        </div>
+      </div>
+      <div class="dog-card" data-name="Daisy" data-age="3" data-breed="Poodle">
+        <img src="https://placedog.net/150/155" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Daisy</h2>
+          <p>Age: 3 years</p>
+          <p>Breed: Poodle</p>
+          <p>Daisy is a calm and affectionate dog who loves to cuddle.</p>
+          <button class="adopt-btn">Adopt Me</button>
+        </div>
+      </div>
+      <div class="dog-card" data-name="Rocky" data-age="1" data-breed="Boxer">
+        <img src="https://placedog.net/150/156" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Rocky</h2>
+          <p>Age: 1 year</p>
+          <p>Breed: Boxer</p>
+          <p>Rocky is a playful and curious dog who loves to explore.</p>
+          <button class="adopt-btn">Adopt Me</button>
+        </div>
+      </div>
+      <div class="dog-card" data-name="Molly" data-age="2" data-breed="Dachshund">
+        <img src="https://placedog.net/150/157" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Molly</h2>
+          <p>Age: 2 years</p>
+          <p>Breed: Dachshund</p>
+          <p>Molly is a sweet and gentle dog who loves to be pampered.</p>
+          <button class="adopt-btn">Adopt Me</button>
+        </div>
+      </div>
+      <div class="dog-card" data-name="Duke" data-age="3" data-breed="Rottweiler">
+        <img src="https://placedog.net/150/158" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Duke</h2>
+          <p>Age: 3 years</p>
+          <p>Breed: Rottweiler</p>
+          <p>Duke is a friendly and energetic dog who loves to play.</p>
+          <button class="adopt-btn">Adopt Me</button>
+        </div>
+      </div>
+      <div class="dog-card" data-name="Lola" data-age="4" data-breed="Shih Tzu">
+        <img src="https://placedog.net/150/159" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Lola</h2>
+          <p>Age: 4 years</p>
+          <p>Breed: Shih Tzu</p>
+          <p>Lola is a curious and adventurous dog who loves to explore.</p>
+          <button class="adopt-btn">Adopt Me</button>
+        </div>
+      </div>
+      <div class="dog-card" data-name="Buster" data-age="2" data-breed="Cocker Spaniel">
+        <img src="https://placedog.net/150/160" alt="Cute Dog">
+        <div class="dog-info">
+          <h2>Buster</h2>
+          <p>Age: 2 years</p>
+          <p>Breed: Cocker Spaniel</p>
+          <p>Buster is a playful and affectionate dog who loves to be around people.</p>
+          <button class="adopt-btn">Adopt Me</button>  
+        </div>
+    </div>
+          <div class="dog-card" data-name="Buster" data-age="2" data-breed="Cocker Spaniel">
+            <img src="https://placedog.net/150/160" alt="Cute Dog">
+            <div class="dog-info">    
+           <h2>Buster</h2>
+            <p>Age: 2 years</p>
+            <p>Breed: Cocker Spaniel</p>
+            <p>Buster is a playful and affectionate dog who loves to be around people.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Sadie" data-age="3" data-breed="Pomeranian">
+          <img src="https://placedog.net/150/161" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Sadie</h2>
+            <p>Age: 3 years</p>
+            <p>Breed: Pomeranian</p>
+            <p>Sadie is a calm and gentle dog who loves to relax and be petted.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Jack" data-age="1" data-breed="Chihuahua">
+          <img src="https://placedog.net/150/162" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Jack</h2>
+            <p>Age: 1 year</p>
+            <p>Breed: Chihuahua</p>
+            <p>Jack is a playful and energetic dog who loves to chase toys.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Sophie" data-age="2" data-breed="Yorkshire Terrier">
+          <img src="https://placedog.net/150/163" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Sophie</h2>
+            <p>Age: 2 years</p>
+            <p>Breed: Yorkshire Terrier</p>
+            <p>Sophie is a friendly and affectionate dog who loves to be around people.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Rex" data-age="3" data-breed="Doberman">
+          <img src="https://placedog.net/150/164" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Rex</h2>
+            <p>Age: 3 years</p>
+            <p>Breed: Doberman</p>
+            <p>Rex is a calm and gentle dog who enjoys lounging and being petted.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Lily" data-age="1" data-breed="Cavalier King Charles Spaniel">
+          <img src="https://placedog.net/150/165" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Lily</h2>
+            <p>Age: 1 year</p>
+            <p>Breed: Cavalier King Charles Spaniel</p>
+            <p>Lily is a playful and curious dog who loves to explore.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Bailey" data-age="2" data-breed="Siberian Husky">
+          <img src="https://placedog.net/150/166" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Bailey</h2>
+            <p>Age: 2 years</p>
+            <p>Breed: Siberian Husky</p>
+            <p>Bailey is a friendly and affectionate dog who loves to be around people.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Zoe" data-age="3" data-breed="Great Dane">
+          <img src="https://placedog.net/150/167" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Zoe</h2>
+            <p>Age: 3 years</p>
+            <p>Breed: Great Dane</p>
+            <p>Zoe is a calm and gentle dog who enjoys lounging and being petted.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Toby" data-age="1" data-breed="Shiba Inu">
+          <img src="https://placedog.net/150/168" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Toby</h2>
+            <p>Age: 1 year</p>
+            <p>Breed: Shiba Inu</p>
+            <p>Toby is a playful and energetic dog who loves to chase toys.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Maggie" data-age="2" data-breed="Border Collie">
+          <img src="https://placedog.net/150/169" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Maggie</h2>
+            <p>Age: 2 years</p>
+            <p>Breed: Border Collie</p>
+            <p>Maggie is a friendly and affectionate dog who loves to be around people.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Riley" data-age="3" data-breed="Australian Shepherd">
+          <img src="https://placedog.net/150/170" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Riley</h2>
+            <p>Age: 3 years</p>
+            <p>Breed: Australian Shepherd</p>
+            <p>Riley is a calm and gentle dog who enjoys lounging and being petted.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+        <div class="dog-card" data-name="Coco" data-age="1" data-breed="French Bulldog">
+          <img src="https://placedog.net/150/171" alt="Cute Dog">
+          <div class="dog-info">
+            <h2>Coco</h2>
+            <p>Age: 1 year</p>
+            <p>Breed: French Bulldog</p>
+            <p>Coco is a playful and curious dog who loves to explore.</p>
+            <button class="adopt-btn">Adopt Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function sortDogs() {
+        const sortOption = document.getElementById('sort').value;
+        const dogList = document.getElementById('dog-list');
+        const dogs = Array.from(dogList.getElementsByClassName('dog-card'));
+  
+        dogs.sort((a, b) => {
+          const aValue = a.dataset[sortOption].toLowerCase();
+          const bValue = b.dataset[sortOption].toLowerCase();
+  
+          if (sortOption === 'age') {
+            return parseInt(aValue) - parseInt(bValue);
+          }
+  
+          if (aValue < bValue) return -1;
+          if (aValue > bValue) return 1;
+          return 0;
+        });
+  
+        dogs.forEach(dog => dogList.appendChild(dog));
+      }
+    </script>
+  </body>
+  </html>
+  
